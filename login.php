@@ -29,9 +29,9 @@
 		<?php
 			if(isset($_POST['login']))
 			{
-				@$username=$_POST['username'];
+				$username=$_POST['username'];
 				
-				@$password=$_POST['password'];
+				$password=$_POST['password'];
 				$query = "select * from users where username='$username' or email='$username' and password='$password' ";
 				//echo $query;
 				$query_run = mysqli_query($db,$query);

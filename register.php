@@ -14,12 +14,9 @@
 	<div id="main-border">
 	<center><h2>Sign Up Form</h2></center>
 		<form action="register.php" method="post">
-			
 			<div class="main-form">
-				
 				<input type="text" placeholder="Enter Username" name="username" required>
 				<input type="text" placeholder="Enter email" name="email" required>
-				
 				<input type="password" placeholder="Enter Password" name="password" required>
 				<input type="password" placeholder="Confirm Password" name="cpassword" required>
 				<button name="register" class="sign_up_btn" type="submit">Sign Up</button>
@@ -27,14 +24,14 @@
 				<a href="login.php"><button type="button" class="back_btn"><< Back to Login</button></a>
 			</div>
 		</form>
-		
 		<?php
 			if(isset($_POST['register']))
-			{
-				@$username=$_POST['username'];
-				@$email1=$_POST['email'];
-				@$password=$_POST['password'];
-				@$cpassword=$_POST['cpassword'];
+			{	
+				echo $_POST['register'];
+				$username=$_POST['username'];
+				$email1=$_POST['email'];
+				$password=$_POST['password'];
+				$cpassword=$_POST['cpassword'];
 				
 				if($password==$cpassword)
 				{
